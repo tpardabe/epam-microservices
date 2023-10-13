@@ -1,3 +1,4 @@
 FROM openjdk:11
-COPY target/song-project-1.0.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/song-1.0.jar app.jar
+ENTRYPOINT ["java","-Dspring.profiles.active=dev", "-jar","/app.jar"]
+EXPOSE 8080
