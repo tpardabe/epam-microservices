@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "song", url = "${song-service.url}")
+@FeignClient(name = "SONG-SERVICE"/*, value = "song", url = "${song-service.url}"*/)
 //TODO: need uri for song service
 public interface SongService {
 

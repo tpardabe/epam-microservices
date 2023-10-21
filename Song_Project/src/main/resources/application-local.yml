@@ -1,4 +1,8 @@
+server:
+  port: 8080
 spring:
+  application:
+    name: song-service
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -10,3 +14,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka
