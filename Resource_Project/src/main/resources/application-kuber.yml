@@ -18,7 +18,7 @@ spring:
     hibernate:
       ddl-auto: update
 song-service:
-  url: "http://song-app:8080"
+  url: "http://song-service:8080"
 
 eureka:
   instance:

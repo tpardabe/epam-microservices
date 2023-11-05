@@ -19,11 +19,11 @@ spec:
     - port: 8080
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
-      # targetPort: 8080
+      targetPort: 8080
       # # Optional field
       # # By default and for convenience, the Kubernetes control plane
       # # will allocate a port from a range (default: 30000-32767)
-      # nodePort: 30007
+      nodePort: 30000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -45,6 +45,7 @@ spec:
       containers:
       - name: song-app
         image: song-app:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8080
 
@@ -66,11 +67,11 @@ spec:
     - port: 8081
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
-      # targetPort: 8080
+      targetPort: 8081
       # # Optional field
       # # By default and for convenience, the Kubernetes control plane
       # # will allocate a port from a range (default: 30000-32767)
-      # nodePort: 30007
+      nodePort: 30001
 
 
 ---
@@ -95,6 +96,7 @@ spec:
       containers:
       - name: resource-app
         image: resource-app:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8081
 
